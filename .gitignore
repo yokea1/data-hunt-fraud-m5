@@ -7,3 +7,5 @@ reports/*.csv
 reports/*.json
 reports/*.png
 reports/figs/
+!reports/figs/
+!reports/figs/*.png
