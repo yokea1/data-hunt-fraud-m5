@@ -9,13 +9,13 @@
 
 ## Why this repo
 - Business-aligned: decision threshold by **Expected Cost**, not only AUC/PR/F1
-- Temporal robustness: **time-split** evaluation + rolling-origin backtests
+- Temporal robustness: **time-split** + rolling-origin backtests
 - Calibration: **Reliability** diagram / ECE
-- Reproducible: fixed seeds; figures and metrics exported to `reports/`
+- Reproducible: fixed seeds; figures & metrics exported to `reports/`
 
 ## Highlights
-- **Best-F1 ≠ Min-Cost** under asymmetric loss (e.g., FP:FN=1:10) → fewer FN and lower loss
-- Artifacts-first: PR/ROC, threshold–F1/cost, confusion matrices, reliability; all versioned
+- **Best-F1 ≠ Min-Cost** under FP:FN=1:10 → fewer FN & lower business loss
+- Artifacts-first: PR/ROC, threshold–F1/cost, confusion matrices, reliability; versioned
 
 ## Repo structure
 
@@ -32,8 +32,6 @@ data-hunt-fraud-m5/
 ├─ .github/workflows/{ci.yml,lint.yml}
 ├─ requirements.txt · .gitignore · LICENSE
 └─ README.md
-
-
 ## Quickstart
 ```bash
 python -m venv .venv && source .venv/bin/activate
@@ -46,7 +44,7 @@ Results — Fraud (IEEE-CIS)
 
 Test (HistGradientBoosting): PR-AUC 0.4616, ROC-AUC 0.8776, F1@0.50 0.3767
 
-Validation: best-F1 ≈ 0.72, min-cost ≈ 0.56 under FP:FN = 1:10
+Validation: best-F1 ≈ 0.72, min-cost ≈ 0.56 (FP:FN = 1:10)
 
 
 
@@ -67,7 +65,7 @@ Features: wide→long, lag1/7/28, rolling_mean_7, weekday/month/holiday
 
 Backtesting: 3-fold expanding-window with fixed seeds
 
-80/20 split: Naive(t-1) → Ridge improved to MAE 0.4961 (from 0.7097), MAPE 47.30% (from 69.35%)
+80/20: Naive(t-1) → Ridge improves to MAE 0.4961 (from 0.7097) and MAPE 47.30% (from 69.35%)
 
 3-fold CV mean: MAE 0.7723 / MAPE 68.71%
 
@@ -76,19 +74,19 @@ Data placement
 IEEE-CIS CSVs → data/ieee/
 
 M5 CSVs → data/m5/
-(Original datasets are not distributed here; please respect their licenses.)
+(Original datasets are not distributed; please respect licenses.)
 
-Reproducibility and Ops
+Reproducibility & Ops
 
-Fixed seeds; artifacts live in reports/
+Fixed seeds; artifacts in reports/
 
 Minimal tests via pytest -q
 
-Lint and formatting via pre-commit (Black, Ruff, Isort)
+Lint/format: pre-commit (Black/Ruff/Isort)
 
 Citation
 
-If this work helps, please star and cite a release tag (e.g., v1.0.1).
+If this work helps, star ⭐ and cite a release tag (e.g., v1.0.1).
 
 License
 

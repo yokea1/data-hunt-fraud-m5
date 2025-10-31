@@ -30,3 +30,7 @@ reports/*.csv
 !reports/figs/*.png
 !reports/figs/
 !reports/figs/*.png
+!reports/figs/
+!reports/figs/*.png
+!reports/figs/
+!reports/figs/*.png
