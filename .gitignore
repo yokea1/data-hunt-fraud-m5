@@ -9,3 +9,22 @@ reports/*.png
 reports/figs/
 !reports/figs/
 !reports/figs/*.png
+# IDE / 环境
+.idea/
+.vscode/
+.venv/
+__pycache__/
+*.pyc
+
+# 数据与大产物（不入库）
+data/
+sample_data.csv
+reports/*.html
+reports/summary.txt
+reports/*.csv
+
+# 结果图：允许跟踪 figs 下的 PNG
+!reports/figs/
+!reports/figs/*.png
+!reports/figs/
+!reports/figs/*.png
