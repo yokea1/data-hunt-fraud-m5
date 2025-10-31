@@ -1,0 +1,7 @@
+=== Naive(t-1) ===
+MAE:  0.7097
+MAPE: 69.35%
+
+=== Ridge (lag1 + weekday/month/weekend + is_event) ===
+MAE:  0.4961
+MAPE: 47.30%

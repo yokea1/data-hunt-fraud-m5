@@ -1,0 +1,5 @@
+PR-AUC: 0.139231
+ROC-AUC: 0.804701
+F1(pos) @0.50: 0.152078
+Best F1 threshold: 0.8500, F1=0.259305
+Min Expected Cost threshold: 0.7800, Cost=9757.00 (FP=1.0, FN=10.0)

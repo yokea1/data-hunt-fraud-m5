@@ -1,0 +1,59 @@
+=== SHAPE === (177162, 434)
+
+=== HEAD ===
+   TransactionID  isFraud  TransactionDT  TransactionAmt ProductCD  card1  card2  card3       card4  ...  id_32 id_33  id_34  id_35  id_36  id_37 id_38 DeviceType  DeviceInfo
+0        3457624        0       12153579         724.000         W   7826  481.0  150.0  mastercard  ...    NaN   NaN    NaN    NaN    NaN    NaN   NaN        NaN         NaN
+1        3552820        0       15005886         108.500         W  12544  321.0  150.0        visa  ...    NaN   NaN    NaN    NaN    NaN    NaN   NaN        NaN         NaN
+2        3271083        0        6970178          47.950         W   9400  111.0  150.0  mastercard  ...    NaN   NaN    NaN    NaN    NaN    NaN   NaN        NaN         NaN
+3        3226689        0        5673658         100.599         C  15885  545.0  185.0        visa  ...    NaN   NaN    NaN    NaN    NaN    NaN   NaN        NaN         NaN
+4        3268855        0        6886780         107.950         W  15497  490.0  150.0        visa  ...    NaN   NaN    NaN    NaN    NaN    NaN   NaN        NaN         NaN
+5        3400908        0       10444930         280.000         W   7919  194.0  150.0  mastercard  ...    NaN   NaN    NaN    NaN    NaN    NaN   NaN        NaN         NaN
+6        3400692        0       10442147         311.950         W   9002  453.0  150.0        visa  ...    NaN   NaN    NaN    NaN    NaN    NaN   NaN        NaN         NaN
+7        3461182        0       12254683         330.990         W  14183  555.0  150.0        visa  ...    NaN   NaN    NaN    NaN    NaN    NaN   NaN        NaN         NaN
+8        3357788        1        9228284          10.392         C   9633  130.0  185.0        visa  ...    NaN   NaN    NaN      F      F      T     F    desktop     Windows
+9        3015757        0         739585         335.000         W  11207  361.0  150.0        visa  ...    NaN   NaN    NaN    NaN    NaN    NaN   NaN        NaN         NaN
+
+[10 rows x 434 columns]
+
+=== INFO ===
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 177162 entries, 0 to 177161
+Columns: 434 entries, TransactionID to DeviceInfo
+dtypes: float64(399), int64(4), object(31)
+memory usage: 586.6+ MB
+
+=== DESCRIBE (numeric) ===
+       TransactionID        isFraud  TransactionDT  TransactionAmt          card1          card2  ...        id_21        id_22        id_24        id_25        id_26         id_32
+count   1.771620e+05  177162.000000   1.771620e+05   177162.000000  177162.000000  174540.000000  ...  1511.000000  1517.000000  1385.000000  1509.000000  1516.000000  23383.000000
+mean    3.282277e+06       0.035792   7.371820e+06      135.345024    9897.964264     362.410863  ...   368.347452    16.101516    12.804332   331.502982   149.696570     26.542360
+std     1.702793e+05       0.185772   4.611526e+06      247.198780    4906.111096     157.773973  ...   195.272736     7.064178     2.313877    99.840500    31.698189      3.747744
+min     2.987000e+06       0.000000   8.640000e+04        0.251000    1006.000000     100.000000  ...   101.000000    12.000000    11.000000   100.000000   100.000000      0.000000
+25%     3.135047e+06       0.000000   3.032964e+06       43.212500    6019.000000     215.000000  ...   252.000000    14.000000    11.000000   321.000000   119.000000     24.000000
+50%     3.282265e+06       0.000000   7.306307e+06       68.950000    9678.000000     361.000000  ...   252.000000    14.000000    11.000000   321.000000   150.000000     24.000000
+75%     3.429273e+06       0.000000   1.123017e+07      125.000000   14207.500000     512.000000  ...   472.000000    14.000000    15.000000   374.000000   169.000000     32.000000
+max     3.577539e+06       1.000000   1.581113e+07    31937.391000   18396.000000     600.000000  ...   854.000000    42.000000    26.000000   548.000000   216.000000     32.000000
+
+[8 rows x 403 columns]
+
+=== DESCRIBE (categorical) ===
+       ProductCD   card4   card6 P_emaildomain R_emaildomain     M1     M2     M3  ...      id_33           id_34  id_35  id_36  id_37  id_38 DeviceType DeviceInfo
+count     177162  176699  176701        148546         41175  95791  95791  95791  ...      22071           23427  42300  42300  42300  42300      42249      35622
+unique         5       4       4            59            60      2      2      2  ...        164               4      2      2      2      2          2       1259
+top            W    visa   debit     gmail.com     gmail.com      T      T      T  ...  1920x1080  match_status:2      T      F      T      F    desktop    Windows
+freq      131874  115320  132022         68328         17231  95777  85641  75553  ...       5074           18028  23442  40186  33085  22093      25552      14335
+
+[4 rows x 31 columns]
+
+=== NULL COUNTS ===
+id_24            175777
+id_25            175653
+id_21            175651
+id_07            175650
+id_08            175650
+                  ...  
+C3                    0
+C2                    0
+C1                    0
+isFraud               0
+TransactionID         0
+Length: 434, dtype: int64
